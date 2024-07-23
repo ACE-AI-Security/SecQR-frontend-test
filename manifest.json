@@ -8,9 +8,7 @@
   },
   "action": {
     "default_icon": "icons/icon.png",
-    "default_title": "SecQR",
-    "default_popup": "html/main.html",
-    "browser_style": false
+    "default_title": "SecQR"
   },
   "permissions": [
     "declarativeNetRequest",
@@ -22,10 +20,15 @@
     "clipboardRead",
     "clipboardWrite",
     "activeTab",
-    "storage"
+    "storage",
+    "identity"
   ],
   "background": {
     "service_worker": "background.js"
   },
-  "host_permissions": ["<all_urls>"]
+  "host_permissions": ["<all_urls>"],
+  "oauth2": {
+    "client_id": "326060264822-san17tbv7cuivo81tg3vqc49dpc2g0gk.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile"]
+  }
 }
